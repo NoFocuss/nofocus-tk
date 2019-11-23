@@ -1,9 +1,13 @@
 "use strict";
 
-function greet()
-{
-  return "Hello World";
+function submitAction(entry) {
+
+  var entry = $("input").first().val()
+  if (entry === "hi")
+  {
+    $("span").text("Validated").show();
+
+  }
+  $( "span" ).text( "Not valid!" ).show().fadeOut( 1000 );
+  event.preventDefault();
 };
-
-
-document.write(`${greet()}`)
