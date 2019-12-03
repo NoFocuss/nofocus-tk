@@ -1,13 +1,16 @@
-"use strict";
 
-function submitAction(entry) {
+function start(){
+var txt = '';
+var xmlhttp = new XMLHttpRequest();
 
-  var entry = $("input").first().val()
-  if (entry === "hi")
-  {
-    $("span").text("Validated").show();
 
-  }
-  $( "span" ).text( "Not valid!" ).show().fadeOut( 1000 );
-  event.preventDefault();
+    var txt = xmlhttp.responseText;
+
+  xmlhttp.open("GET","abc.txt",true);
+  xmlhttp.send();
+  console.log(xmlhttp.responseText)
+  txt += "js";
+  document.getElementById("theSpan").innerHTML = xmlhttp.responseText;
+
+
 };
