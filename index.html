@@ -10,34 +10,39 @@
 <body>
 
   <header id="container" align="center" >
-
     <div id="title" class="title">
       <a href="./index.html">nofocus.tk</a>
     </div>
-
     <div id="options" class="options" align="right">
-      <a>Sign In</a>
+      <a id="signin">SignIn</a>
+      <a>PostingBoard</a>
+      <script>
+        $("#signin").bind("click", function(){
+
+
+
+        });      
+      </script>
     </div>
   </header>
 
-
-
-
-
+    
+    <div>
       <form action="javascript:alert( 'success!' );" >
           <div id='auth'>
-        <input type="text">
-      <br>
-        <input type="submit"/>
-        </div>
+            <label for="username">Username</label>
+            <input id="username" type="text"/>
+              <br>
+              <label for="pw">Password</label>
+              <input id="pw" type="password"/>
+              <br>
+            <input type="submit"/>
+          </div>
       </form>
-
-
-      <span></span>
-
+        <span></span>
       <script>
-      $( "form" ).submit(function( event ) {
-        if ( $( "input" ).first().val() === "correct" ) {
+      $( "form" ).submit(function(event) {
+        if ( $( "#username" ).val() === "nofocus" && $("#pw").val() === "password") {
           $( "span" ).text( "Validated..." ).show();
           return;
         }
@@ -46,17 +51,21 @@
         event.preventDefault();
       });
       </script>
+    </div>
+
+
 
       <div id="ajaxtest">
-
-
-
-        <button id="btn" type="button" onclick="start()">
+       <button id="btn" type="button">
           Button
         </button>
 
         <p id="theSpan">hello</p>
-
+        <script>
+          $("#btn").bind("click", function(){
+            $("#theSpan").text("changed")
+          }); 
+        </script>
       </div>
 
 </body>
