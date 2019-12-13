@@ -55,3 +55,17 @@ p {
   justify-content: center;
 
 }
+
+#authform-wrapper {
+
+  display : none;
+  width : 1280px;
+  height : 720px;
+  padding-left: 320px;
+  float : center;
+  background: red;
+}
+
+#trump{
+	display : none;
+}

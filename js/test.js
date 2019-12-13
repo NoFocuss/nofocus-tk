@@ -1,16 +1,32 @@
-
+function loadstuff()
+{
+$("#testing").attr("href","./testing/testing.html")
+};
 function start(){
 var txt = '';
 var xmlhttp = new XMLHttpRequest();
 
 
-    var txt = xmlhttp.responseText;
+    
 
   xmlhttp.open("GET","abc.txt",true);
+  txt = xmlhttp.responseText;
   xmlhttp.send();
-  console.log(xmlhttp.responseText)
+  console.log(txt);
   txt += "js";
-  document.getElementById("theSpan").innerHTML = xmlhttp.responseText;
+  $("#theSpan").text(txt);
 
 
+};
+
+function showAuthForm(){
+
+	var box = $("#authform-wrapper")
+	$("#signin").bind("click", function()
+	{
+		
+			box.show();
+		
+	
+	}
 };
