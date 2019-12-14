@@ -1,6 +1,6 @@
 
 def ini():
-	x += ("Content-Type: text/html\n")    
+	x = ("Content-Type: text/html\n")    
 	x+=""
 	return str(x)
 
@@ -17,4 +17,4 @@ def createElem(tag, attr, content):
 	return output
 
 if __name__ != '__main__':
-	ini()
+	print(ini())
