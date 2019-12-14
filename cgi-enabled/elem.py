@@ -29,6 +29,7 @@ def closeElem(tag):
 	output=""
 	output+= "</" + tag + ">"
 	return output
-	
+
 if __name__ != '__main__':
 	print(ini())
+	n = str(none)

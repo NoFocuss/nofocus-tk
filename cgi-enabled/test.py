@@ -4,4 +4,4 @@ import cgitb
 cgitb.enable()
 import elem
 
-print(elem.createElem("p", "none", "test"))
+print(elem.createElem("p", n, "test"))
