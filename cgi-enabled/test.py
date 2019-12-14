@@ -1,4 +1,7 @@
 #!/usr/bin/python3.7
-import elem as e
 
-e.createElem("p", "none", "test")
+import cgitb
+cgitb.enable()
+import elem
+
+print(elem.createElem("p", "none", "test"))
