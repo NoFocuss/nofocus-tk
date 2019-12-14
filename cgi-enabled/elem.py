@@ -32,4 +32,4 @@ def closeElem(tag):
 
 if __name__ != '__main__':
 	print(ini())
-	n = str(none)
+	
