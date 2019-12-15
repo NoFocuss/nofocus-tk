@@ -1,36 +1,38 @@
 
-def ini():
-	print("Content-Type: text/html")
-	print("")
+
+class Element():
+
+	def __init__(self, tag, needs_close):
+		self.tag = tag
+		self.needs_close = bool()
+		self.attributes = {}
+		self.content = ""
 
 
 
-def createElem(tag, attr, content):
 
-	output = (f"<{tag}")
-	if attr == None:
-		output+=">"
-	else:
-		output+=" " + str(attr) + ">"
-	if content != None:
-		output+=str(content)
-	output += "</"+str(tag)+">"
-	return output
+	def open(self):
+		output = (f"<{self.tag} ")
 
-def openElem(tag, attr):
-	output = (f"<{tag}")
-	if str(attr) != None:
-		output+=(f"  {attr}>")
-	else:
-		output+=">"
-	return output
+		if bool(self.attributes) == True:
+			for attr in self.attributes:
+				output += str(attr)
+				output += "=\""+self.attributes[attr]+"\" "
 
-def closeElem(tag):
-	output=(f"</{tag}>")
-	return output
+		output += ">"
+		return output
 
-def attr(name, value):
-	name = str(name)
-	value = str(value)
-	output= (f"{name}=\"{value}\" ")
-	return output
+
+	def close(self):
+		output = ""
+		if self.content:
+			output += self.content
+		output += (f"</{self.tag}>")
+		return output
+
+
+	def __str__(self):
+		output=open(self)
+		if self.needs_close:
+			output += close(self)
+		return str(output)
