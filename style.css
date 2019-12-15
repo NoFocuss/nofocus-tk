@@ -56,15 +56,23 @@ p {
 
 }
 
-.auth{
-
-  font-family: "Calibri Light", "sans-serif";
-  margin-left: auto;
-  margin-right: auto;
+div.auth_wrapper{
+  vertical-align: middle;
   width: 10em;
   background: red;
+  position:relative;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%)
 }
 
+#auth_wrapper{
+  font-family: "Calibri Light", sans-serif;
+  float: center;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 #trump{
 	display : none;

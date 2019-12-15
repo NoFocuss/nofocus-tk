@@ -23,7 +23,7 @@ pw = Element("input", False)
 pw.attributes={"id":"password", "type":"password", "placeholder":"Password"}
 br = Element("br", False)
 div_auth = Element("div", True)
-div_auth.attributes={"id":"auth", "class":"auth"}
+div_auth.attributes={"id":"auth_wrapper", "class":"auth_wrapper"}
 s = Structure()
 
 s.stack(head.open())
