@@ -1,33 +1,37 @@
 
 def ini():
 	print("Content-Type: text/html")
-	
+	print("")
 
 
 
 def createElem(tag, attr, content):
-	output = ""
-	output += "<"+str(tag)
-	if str(attr) == "none":
+
+	output = (f"<{tag}")
+	if attr == None:
 		output+=">"
 	else:
 		output+=" " + str(attr) + ">"
-	output+=str(content)+"</"+str(tag)+">"
+	if content != None:
+		output+=str(content)
+	output += "</"+str(tag)+">"
 
 	return output
 
 def openElem(tag, attr):
-	output = ""
-	output += "<"+str(tag)
-	if str(attr) == "none":
-		output+=">"
+	output = (f"<{tag}")
+	if str(attr) != None:
+		output+=(f"  {attr}>")
 	else:
-		output+=" " + str(attr) + ">"
+		output+=">"
 	return output
 
 def closeElem(tag):
-	output=""
-	output+= "</" + tag + ">"
+	output=(f"</{tag}>")
 	return output
 
-
+def attr(name, value):
+	name = str(name)
+	value = str(value)
+	output= (f"{name}=\"{value}\"")
+	return output
