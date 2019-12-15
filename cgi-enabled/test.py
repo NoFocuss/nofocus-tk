@@ -20,5 +20,5 @@ for element in head:
 	content+=element
 print(elem.createElem("head", None, content))
 print(elem.openElem("form"))
-print(elem.openElem("input", (f"{attr("id", "username")} {attr("type", "text")}"))
+print(elem.openElem("input", (f"{attr("id", "username")} {attr("type", "text")}")))
 print(elem.closeElem("form"))
