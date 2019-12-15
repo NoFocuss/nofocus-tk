@@ -60,7 +60,7 @@ p {
   padding: 10px;
 }
 
-.auth_wrapper div{
+#auth > div{
   font-family: "Calibri Light", sans-serif;
   display: inline-block;
   font-size: 20px;

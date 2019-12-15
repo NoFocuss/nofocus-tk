@@ -14,15 +14,16 @@ title.content="test.py"
 body = Element("body", True)
 form = Element("form", True)
 us = Element("input", False)
-us.attributes={"id":"username", "type":"text", "placeholder":"Username"}
+us.attributes={"id":"username", "type":"text", "placeholder":"username"}
 pw = Element("input", False)
-pw.attributes={"id":"password", "type":"password", "placeholder":"Password"}
+pw.attributes={"id":"password", "type":"password", "placeholder":"password"}
 br = Element("br", False)
 div_auth = Element("div", True)
 div_auth.attributes={"id":"auth", "class":"auth_wrapper"}
-
 div_auth2 = Element("div", True)
 div_auth2.attributes={"id":"auth_form"}
+h1_signin= Element("h1", True)
+h1_signin.content="Sign In"
 s = Structure()
 
 s.stack(head.open())
@@ -32,6 +33,7 @@ s.stack(head.close())
 s.stack(body.open())
 s.stack(div_auth.open())
 s.stack(div_auth2.open())
+s.stack(h1_signin.line())
 s.stack(form.open())
 s.stack(us.line())
 s.stack(br.line())
