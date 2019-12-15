@@ -21,6 +21,7 @@ us = Element("input", False)
 us.attributes={"id":"username", "type":"text"}
 pw = Element("input", False)
 pw.attributes={"id":"password", "type":"password"}
+br = Element("br", False)
 
 s = Structure()
 
@@ -30,6 +31,7 @@ s.stack(title.line())
 s.stack(head.close())
 s.stack(form.open())
 s.stack(us.line())
+s.stack(br.line())
 s.stack(pw.line())
 s.stack(form.close())
 
