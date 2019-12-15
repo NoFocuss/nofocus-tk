@@ -1,8 +1,8 @@
 
 def ini():
-	x = ("Content-Type: text/html\n")
-	x+=""
-	return str(x)
+	print("Content-Type: text/html")
+	
+
 
 
 def createElem(tag, attr, content):
@@ -30,6 +30,4 @@ def closeElem(tag):
 	output+= "</" + tag + ">"
 	return output
 
-if __name__ != '__main__':
-	print(ini())
-	
+
