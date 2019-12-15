@@ -23,7 +23,10 @@ pw = Element("input", False)
 pw.attributes={"id":"password", "type":"password", "placeholder":"Password"}
 br = Element("br", False)
 div_auth = Element("div", True)
-div_auth.attributes={"id":"auth_wrapper", "class":"auth_wrapper"}
+div_auth.attributes={"id":"auth", "class":"auth_wrapper"}
+
+div_auth2 = Element("div", True)
+div_auth2.attributes={"id":"auth_form"}
 s = Structure()
 
 s.stack(head.open())
@@ -31,10 +34,12 @@ s.stack(csslink.line())
 s.stack(title.line())
 s.stack(head.close())
 s.stack(div_auth.open())
+s.stack(div_auth2.open())
 s.stack(form.open())
 s.stack(us.line())
 s.stack(br.line())
 s.stack(pw.line())
 s.stack(form.close())
+s.stack(div_auth2.close())
 s.stack(div_auth.close())
 print(s.printStack())
