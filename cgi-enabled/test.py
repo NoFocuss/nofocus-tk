@@ -14,8 +14,11 @@ head = []
 
 head.append("<link rel=\"stylesheet\" type=\"text/css\" href=\"./../style.css\">")
 head.append(elem.createElem("title", "none", "test.py"))
+
 content = ""
 for element in head:
 	content+=element
 print(elem.createElem("head", "none", content))
-
+print(elem.openElem("form", "none"))
+print(elem.openElem("input", "id=\"username\"type=\"text\""))
+print(elem.closeElem("form"))
