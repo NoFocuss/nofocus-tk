@@ -22,6 +22,6 @@ print(elem.createElem("head", None, content))
 
 print(elem.openElem("form", None))
 print(elem.openElem("input", elem.attr("id", "username")+elem.attr("type", "text")))
-print(elem.createElem("p", None, "test23"))
+print(elem.createElem("p", None, "test234"))
 print(elem.openElem("input", elem.attr('id', 'pw')+elem.attr('type', 'password')))
 print(elem.closeElem("form"))
