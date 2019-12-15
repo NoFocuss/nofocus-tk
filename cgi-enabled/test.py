@@ -10,18 +10,18 @@ from elem import *
 print("Content-Type: text/html")
 print("")
 
-structure = []
 
 head = Element("head", True)
 csslink = Element("Link", False)
 csslink.attributes = { "rel":"stylesheet", "type":"text/css", "href":"./../style.css"}
 title = Element("title", True)
 title.content="test.py"
-structure.append(head.open())
-structure.append(csslink.open())
-structure.append(title.open()+title.close())
-structure.append(head.close())
 
-content = ""
-for element in structure:
-	print(element)
+s = Structure()
+
+s.stack(head.open())
+s.stack(csslink.line())
+s.stack(title.line())
+s.stack(head.close())
+
+print(s.printStack())

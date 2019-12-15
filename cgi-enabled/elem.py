@@ -1,10 +1,10 @@
 
-
+structure = []
 class Element():
 
 	def __init__(self, tag, needs_close):
 		self.tag = tag
-		self.needs_close = bool()
+		self.needs_close = needs_close
 		self.attributes = {}
 		self.content = ""
 
@@ -20,7 +20,7 @@ class Element():
 				output += "=\""+self.attributes[attr]+"\" "
 
 		output += ">"
-		return output
+		return str(output)
 
 
 	def close(self):
@@ -28,11 +28,22 @@ class Element():
 		if self.content:
 			output += self.content
 		output += (f"</{self.tag}>")
-		return output
-
-
-	def __str__(self):
-		output=open(self)
-		if self.needs_close:
-			output += close(self)
 		return str(output)
+
+
+	def line(self):
+		output=str(self.open())
+		if self.needs_close:
+			output += str(self.close())
+		return str(output)
+
+class Structure():
+	def __init__(self):
+		self.structure = []
+
+	def stack(self, value):
+		self.structure.append(str(value))
+
+	def printStack(self):
+		for x in self.structure:
+			print(str(x))
