@@ -56,13 +56,12 @@ p {
 
 }
 
-#authform-wrapper {
+#auth{
 
-  display : none;
-  width : 1280px;
-  height : 720px;
-  padding-left: 320px;
-  float : center;
+  font-family: "Calibri Light", "sans-serif";
+  margin-left: auto;
+  margin-right: auto;
+  width: 10em;
   background: red;
 }
 
