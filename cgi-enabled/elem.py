@@ -1,5 +1,3 @@
-
-structure = []
 class Element():
 
 	def __init__(self, tag, needs_close):
@@ -7,8 +5,6 @@ class Element():
 		self.needs_close = needs_close
 		self.attributes = {}
 		self.content = ""
-
-
 
 
 	def open(self):
