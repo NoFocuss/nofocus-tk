@@ -30,7 +30,8 @@ class Element():
 	def line(self):
 		output=str(self.open())
 		if self.needs_close:
-			output += str(self.close())
+			if bool(self.close()):
+				output += str(self.close())
 		return str(output)
 
 class Structure():
@@ -40,6 +41,9 @@ class Structure():
 	def stack(self, value):
 		self.structure.append(str(value))
 
+
 	def printStack(self):
+		output = ""
 		for x in self.structure:
-			print(str(x))
+			output+= str(x) + "\n"
+		return output

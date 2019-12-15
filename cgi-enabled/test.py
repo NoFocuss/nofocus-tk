@@ -1,9 +1,4 @@
 #!/usr/bin/python3.7
-
-
-
-import cgitb
-
 import sys
 sys.path.insert(0, "/home/ubuntu/nofocus-tk/cgi-enabled")
 from elem import *
@@ -30,12 +25,11 @@ div_auth2 = Element("div", True)
 div_auth2.attributes={"id":"auth_form"}
 s = Structure()
 
-
 s.stack(head.open())
-s.stack(body.open())
-s.stack(csslink.line())
+s.stack(csslink.open())
 s.stack(title.line())
 s.stack(head.close())
+s.stack(body.open())
 s.stack(div_auth.open())
 s.stack(div_auth2.open())
 s.stack(form.open())
@@ -46,4 +40,5 @@ s.stack(form.close())
 s.stack(div_auth2.close())
 s.stack(div_auth.close())
 s.stack(body.close())
+
 print(s.printStack())
