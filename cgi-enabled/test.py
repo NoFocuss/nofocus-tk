@@ -30,8 +30,9 @@ div_auth2 = Element("div", True)
 div_auth2.attributes={"id":"auth_form"}
 s = Structure()
 
-s.stack(body.open())
+
 s.stack(head.open())
+s.stack(body.open())
 s.stack(csslink.line())
 s.stack(title.line())
 s.stack(head.close())
