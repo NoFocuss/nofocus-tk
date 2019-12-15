@@ -18,9 +18,9 @@ title = Element("title", True)
 title.content="test.py"
 form = Element("form", True)
 us = Element("input", False)
-us.attributes={"id":"username", "type":"text"}
+us.attributes={"id":"username", "type":"text", "placeholder":"Username"}
 pw = Element("input", False)
-pw.attributes={"id":"password", "type":"password"}
+pw.attributes={"id":"password", "type":"password", "placeholder":"Password"}
 br = Element("br", False)
 
 s = Structure()
