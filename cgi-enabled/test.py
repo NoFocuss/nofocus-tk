@@ -22,7 +22,9 @@ print(elem.createElem("head", None, content))
 print(elem.openElem("body"))
 print(elem.openElem("form"))
 print(elem.openElem("input", (f"{attr("id", "username")} {attr("type", "text")}")))
-print(elem.createElem("p", None, "test"))
+
 print(elem.openElem("input", (f"{attr("id", "pw")} {attr("type", "password")}")))
+
 print(elem.closeElem("form"))
+print(elem.createElem("p", None, "test"))
 print(elem.closeElem("body"))
