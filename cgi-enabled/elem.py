@@ -15,7 +15,6 @@ def createElem(tag, attr, content):
 	if content != None:
 		output+=str(content)
 	output += "</"+str(tag)+">"
-
 	return output
 
 def openElem(tag, attr):
@@ -33,5 +32,5 @@ def closeElem(tag):
 def attr(name, value):
 	name = str(name)
 	value = str(value)
-	output= (f"{name}=\"{value}\"")
+	output= (f"{name}=\"{value}\" ")
 	return output

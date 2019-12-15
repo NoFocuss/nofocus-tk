@@ -20,10 +20,8 @@ for element in head:
 	content+=element
 print(elem.createElem("head", None, content))
 
-print(elem.openElem("form"))
-print(elem.openElem("input", (f"{attr("id", "username")} {attr("type", "text")}")))
-
-print(elem.openElem("input", (f"{attr("id", "pw")} {attr("type", "password")}")))
-
-print(elem.closeElem("form"))
+print(elem.openElem("form", None))
+print(elem.openElem("input", elem.attr("id", "username")+elem.attr("type", "text")))
 print(elem.createElem("p", None, "test"))
+print(elem.openElem("input", elem.attr('id', 'pw')+elem.attr('type', 'password')))
+print(elem.closeElem("form"))
