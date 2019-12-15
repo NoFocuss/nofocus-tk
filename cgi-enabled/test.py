@@ -16,6 +16,7 @@ csslink = Element("Link", False)
 csslink.attributes = { "rel":"stylesheet", "type":"text/css", "href":"./../style.css"}
 title = Element("title", True)
 title.content="test.py"
+body = Element("body", True)
 form = Element("form", True)
 us = Element("input", False)
 us.attributes={"id":"username", "type":"text", "placeholder":"Username"}
@@ -29,6 +30,7 @@ div_auth2 = Element("div", True)
 div_auth2.attributes={"id":"auth_form"}
 s = Structure()
 
+s.stack(body.open())
 s.stack(head.open())
 s.stack(csslink.line())
 s.stack(title.line())
@@ -42,4 +44,5 @@ s.stack(pw.line())
 s.stack(form.close())
 s.stack(div_auth2.close())
 s.stack(div_auth.close())
+s.stack(body.close())
 print(s.printStack())
