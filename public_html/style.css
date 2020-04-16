@@ -1,0 +1,92 @@
+body {
+  background-image: url(https://www.ubackground.com/_ph/3/270145196.jpg);
+  color: white;
+
+}
+
+header{
+	
+	
+}
+#title{
+	
+	font-size: 36px;
+	color: red;
+	font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", "sans-serif";
+}
+
+#jumbotron {
+	background-color: red;
+	font-size: 36px;
+	display: block;
+  
+}
+
+#container {
+  height: 75px;
+  width: auto;
+  background-color: black;
+  margin-left: 0;
+  margin-right: 0;
+  font-family: "Impact", "Haettenschweiler", 'Franklin Gothic Bold', 'Arial Black', sans-serif;
+  color: red;
+  padding: none;
+}
+
+p {
+  font-family: "Arial", sans-serif;
+}
+
+#container > div.title{
+  display: inline-block;
+  font-size: 48px;
+  text-align: center;
+  text-decoration: none;
+
+}
+
+#container > div.options {
+  display: inline-block;
+  text-align: right;
+  font-family: sans-serif;
+  font-size: 24px;
+  float: right;
+  text-decoration: none;
+
+}
+#title > a {
+  text-decoration: none;
+  color: red;
+}
+#options > a {
+  text-decoration: none;
+  color: red;
+}
+
+
+.label {
+  justify-content: center;
+
+}
+
+.auth_wrapper{
+  margin: auto;
+  width: 50%;
+  border: 3px solid black;
+  background: red;
+  padding: 10px;
+}
+
+#auth > div{
+  font-family: "Calibri Light", sans-serif;
+  display: inline-block;
+  font-size: 20px;
+  padding: 20px;
+}
+
+#trump{
+	display : none;
+}
+#slav{
+	display : none;
+}
